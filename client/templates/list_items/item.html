@@ -1,0 +1,13 @@
+<template name="item">
+  <li class="item">
+  {{domain}}
+    {{#if checked}}
+    <a href="#" class="btn" data-checked="true"><span class="glyphicon glyphicon-check"></span></a>
+    {{else}}
+    <a href="#" class="btn" data-checked="false"><span class="glyphicon glyphicon-unchecked"></span></a>
+    {{/if}}
+    <!-- <a href="#" class="btn btn-right btn-delete"><span class="glyphicon glyphicon-remove text-primary"></span></a> -->
+    <a href="#" class="btn btn-right btn-important"><span class="glyphicon glyphicon-heart-empty text-{{#if important}}danger{{else}}default{{/if}}"></span></a>
+    <span class="title">{{title}}</span>
+  </li>
+</template>

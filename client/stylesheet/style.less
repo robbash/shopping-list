@@ -1,0 +1,141 @@
+@import "mixins";
+
+@box-shadow-color: rgba(0, 0, 0, 0.15);
+@font-family: 'Open Sans', 'Sans Serif', Arial;
+
+body {
+  background: #eee;
+  color: #666666;
+  font-family: @font-family;
+  font-weight: 300;
+}
+
+.navbar-header {
+  float: left;
+}
+.navbar-right {
+  float: right !important;
+  margin-right: -15px;
+}
+
+main ul {
+  background: #fff;
+  padding: 0;
+  list-style: none;
+  .border-radius(3px);
+  .box-shadow(0 1px 1px @box-shadow-color);
+}
+
+.form-inline {
+  .input-group > .form-control {
+    width: inherit;
+  }
+  .form-group {
+    display: inline-table;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+}
+
+#shopping-done {
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  #shopping-done {
+    margin-top: 0;
+  }
+}
+
+.item {
+  position: relative;
+  // overflow: hidden;
+  border-bottom: 1px solid @box-shadow-color;
+
+  .title {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 12px 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+  }
+
+  .btn {
+    position: absolute;
+    color: inherit;
+    .box-shadow(none);
+  }
+
+  .glyphicon {
+    font-size: 2em;
+  }
+
+  .btn-right {
+    position: absolute;
+    right: 0;
+  }
+
+}
+
+.message {
+  position: absolute;
+  z-index: 9000;
+  width: 240px;
+  left: 50%;
+  top: 50%;
+  padding: 15px;
+  margin-left: -120px;
+  margin-top: -50px;
+  color: white;
+  font-size: 1.28em;
+  font-weight: 400;
+  background-color: rgba(0,0,0,0.5);
+  // border: 1px solid rgba(0,0,0,0.7);
+  .border-radius(5px);
+
+  .glyphicon {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  &.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
+  }
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+
+  .form-signin-heading,
+  .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-control {
+    position: relative;
+    height: auto;
+    .box-sizing;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-control:focus {
+    z-index: 2;
+  }
+  input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+
+
