@@ -27,6 +27,10 @@ Template.item.events({
     return false;
   },
   'blur .edit input': function( e ) {
+    if ( $( '#item-' + this._id + ' a.btn-edit:visible' ) ) {
+      return;
+    }
+    
     if ( ( value = $( '#item-' + this._id + ' .edit input' ).val() ) && value != this.title ) {
       Items.update( { _id: this._id }, { $set: { title: value } } );
       showMessage( 'ok', 'Item updated' );
