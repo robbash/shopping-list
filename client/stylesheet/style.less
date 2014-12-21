@@ -48,7 +48,6 @@ main ul {
 
 .item {
   position: relative;
-  // overflow: hidden;
   border-bottom: 1px solid @box-shadow-color;
 
   .title {
@@ -58,7 +57,29 @@ main ul {
     padding: 12px 60px;
     padding-left: 60px;
     padding-right: 60px;
+    @media (min-width: 768px) {
+      padding-right: 100px;
+    }
     box-sizing: border-box;
+
+    input {
+      padding: 0;
+      border: 0;
+      width: 100%;
+      font-style: italic;
+      display: none;
+      outline: none;
+      .box-shadow(none);
+    }
+
+    &.edit {
+      span {
+        display: none;
+      }
+      input {
+        display: inherit;
+      }
+    }
   }
 
   .btn {
@@ -74,6 +95,11 @@ main ul {
   .btn-right {
     position: absolute;
     right: 0;
+
+    &.btn-edit,
+    &.btn-save {
+      right: 46px;
+    }
   }
 
 }
@@ -91,7 +117,6 @@ main ul {
   font-size: 1.28em;
   font-weight: 400;
   background-color: rgba(0,0,0,0.5);
-  // border: 1px solid rgba(0,0,0,0.7);
   .border-radius(5px);
 
   .glyphicon {
