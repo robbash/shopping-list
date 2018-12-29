@@ -1,7 +1,5 @@
 Template.itemsList.helpers({
-  items: function() {
-    return Items.find({}, {sort: {checked: 1, important: -1, title_index: 1}});
-  }
+  items: Items.all()
 });
 
 var inputWidth;
