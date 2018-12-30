@@ -1,3 +1,3 @@
-Template.layout.helpers( {
+Template.layout.helpers({
   version: function() { return Version.findOne(); }
 });
