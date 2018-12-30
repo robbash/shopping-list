@@ -19,7 +19,6 @@ Skill configuration.
 
 ### TODO
 
-* Publish Alexa Skill details
 * Alexa Skill verification ([PHP example
 here](https://philipp-guttmann.de/Blog/Alexa_Skill_Endpoint_PHP/))
 
@@ -61,3 +60,8 @@ use it (or a sub domain) for the shopping list. Just set up a CNAME entry to
 deploy the app to the CNAME. (It still goes to
 [meteor.com](https://www.meteor.com), but this way it's available under your
 domain.)
+
+## Amazon Alexa integration
+
+Please refer to the [Alexa Skill docs](ALEXA.md) for details on how to use the
+shopping list with an Alexa device.
