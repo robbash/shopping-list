@@ -28,3 +28,4 @@ standard-minifier-js
 shell-server
 dynamic-import
 nimble:restivus
+ecmascript

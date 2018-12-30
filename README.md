@@ -19,7 +19,6 @@ Skill configuration.
 
 ### TODO
 
-* I18n support
 * Publish Alexa Skill details
 * Alexa Skill verification ([PHP example
 here](https://philipp-guttmann.de/Blog/Alexa_Skill_Endpoint_PHP/))
@@ -32,6 +31,8 @@ here](https://philipp-guttmann.de/Blog/Alexa_Skill_Endpoint_PHP/))
 
 ## Customisation
 
+### Users
+
 There's not much at the moment, but I'm quite sure you want to customise the
 users.
 
@@ -40,6 +41,13 @@ Have a look at `server/users.sample.js`, customise it and rename it to
 
 (If you already did, start `$ meteor mongo` and delete the fake users with
 `db.users.remove({})` or simply reset the instance with `$ meteor reset`.)
+
+### I18n
+
+While the interface is all English language, the Alexa API responses can match
+your Alexa language. The Alexa Skill query specifies the current language, which
+is used to respond. Currently I've provided English and German, but it's easy
+to add more translations via `lib/locales.js`.
 
 ## Create your online shopping cart
 
