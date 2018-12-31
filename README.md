@@ -1,4 +1,4 @@
-#Shopping list
+# Shopping list
 
 Simple shopping list app based on [Meteor 1.0](https://www.meteor.com) to write
 things you need in a shared space so that it's available online and to the
